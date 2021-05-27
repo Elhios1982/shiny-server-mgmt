@@ -11,6 +11,7 @@ $ sudo stop shiny-server
 $ sudo start shiny-server
 
 
+
 ## Once server has started, we need to add port 3838 to firewall to be able to access
 ### list port and services added to the firewall
 $ sudo firewall-cmd --list-all
@@ -22,5 +23,14 @@ $ sudo firewall-cmd --reload
 ### Verify it was added successfully
 $ sudo firewall-cmd --list-all
 
+sudo firewall-cmd --state
+sudo systemctl stop firewalld
+sudo systemctl start firewalld
+
+### if shiny server is running on VM @ virtualbox we need to use Network = Bridged
+
+### Install 'rmarkdown' package using
+sudo su - \
+-c "R -e \"install.packages('rmarkdown', repos='https://cran.rstudio.com/')\""
 
 
