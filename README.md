@@ -33,4 +33,7 @@ sudo systemctl start firewalld
 sudo su - \
 -c "R -e \"install.packages('rmarkdown', repos='https://cran.rstudio.com/')\""
 
+### This should be it to have Shiny server up and running, log file can be checked here
+$ vim /var/log/shiny-server.log
+
 
